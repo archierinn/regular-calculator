@@ -1,6 +1,12 @@
 <template>
-  <v-container fluid>
-    <v-row align="center">
+  <v-container
+    fluid
+    :class="{'pt-0': $vuetify.breakpoint.mobile}"
+  >
+    <v-row
+      :dense="$vuetify.breakpoint.mobile"
+      align="center"
+    >
       <v-col cols="6">
         <buttons
           :color="'error'"
@@ -15,7 +21,10 @@
         />
       </v-col>
     </v-row>
-    <v-row align="center">
+    <v-row
+      :dense="$vuetify.breakpoint.mobile"
+      align="center"
+    >
       <v-col cols="6">
         <buttons @push="$emit('delete')">
           <v-icon :x-small="$vuetify.breakpoint.mobile">
@@ -30,7 +39,10 @@
         />
       </v-col>
     </v-row>
-    <v-row align="center">
+    <v-row
+      :dense="$vuetify.breakpoint.mobile"
+      align="center"
+    >
       <v-col cols="6">
         <buttons
           :title="'CE'"
@@ -44,7 +56,10 @@
         />
       </v-col>
     </v-row>
-    <v-row align="center">
+    <v-row
+      :dense="$vuetify.breakpoint.mobile"
+      align="center"
+    >
       <v-col cols="6">
         <buttons
           :color="'error'"

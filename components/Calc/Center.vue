@@ -1,6 +1,12 @@
 <template>
-  <v-container fluid>
-    <v-row align="center">
+  <v-container
+    fluid
+    :class="{'pt-0': $vuetify.breakpoint.mobile}"
+  >
+    <v-row
+      :dense="$vuetify.breakpoint.mobile"
+      align="center"
+    >
       <v-col cols="4">
         <buttons
           :color="'#212121'"
@@ -26,7 +32,10 @@
         />
       </v-col>
     </v-row>
-    <v-row align="center">
+    <v-row
+      :dense="$vuetify.breakpoint.mobile"
+      align="center"
+    >
       <v-col cols="4">
         <buttons
           :color="'#212121'"
@@ -52,7 +61,10 @@
         />
       </v-col>
     </v-row>
-    <v-row align="center">
+    <v-row
+      :dense="$vuetify.breakpoint.mobile"
+      align="center"
+    >
       <v-col cols="4">
         <buttons
           :color="'#212121'"
@@ -78,7 +90,10 @@
         />
       </v-col>
     </v-row>
-    <v-row align="center">
+    <v-row
+      :dense="$vuetify.breakpoint.mobile"
+      align="center"
+    >
       <v-col cols="4">
         <buttons
           :color="'#212121'"

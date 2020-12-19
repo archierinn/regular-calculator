@@ -5,8 +5,8 @@
     block
     :height="height"
     max-height="100%"
-    class="text-center mx-1 button"
-    :class="{'white--text': pushValue !== ''}"
+    class="text-center button"
+    :class="{'white--text': pushValue !== '', 'button-mobile': $vuetify.breakpoint.mobile}"
     :color="color"
     @click="$emit('push', pushValue)"
   >
@@ -43,5 +43,8 @@ export default {
 <style scoped>
 .button ::v-deep span {
   font-size: 2vw;
+}
+.button-mobile ::v-deep span {
+  font-size: auto;
 }
 </style>

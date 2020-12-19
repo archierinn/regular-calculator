@@ -1,8 +1,5 @@
 <template>
-  <v-container
-    fluid
-    class="ma-0 pa-0"
-  >
+  <v-container fluid>
     <v-row>
       <v-col cols="12">
         <display
@@ -12,7 +9,78 @@
         />
       </v-col>
     </v-row>
-    <v-row :no-gutters="$vuetify.breakpoint.mobile">
+    <v-row
+      v-if="$vuetify.breakpoint.mobile"
+      align="stretch"
+    >
+      <!-- <v-col
+        cols="3"
+        class="ma-0 pa-0"
+      >
+        <left-side
+          @turn-off="turnOff"
+          @grand-total="grandTotal"
+          @delete="deletes"
+          @memory-recall="memoryRecall"
+          @clear-entry="clearEntry"
+          @memory-delete="memoryDelete"
+          @memory-add="memoryAdd"
+          @turn-on="turnOn"
+        />
+      </v-col> -->
+      <v-col
+        cols="12"
+        class="ma-0 pa-0"
+      >
+        <left-side
+          @turn-off="turnOff"
+          @grand-total="grandTotal"
+          @delete="deletes"
+          @memory-recall="memoryRecall"
+          @clear-entry="clearEntry"
+          @memory-delete="memoryDelete"
+          @memory-add="memoryAdd"
+          @turn-on="turnOn"
+        />
+      </v-col>
+      <!-- <v-col
+          cols="4"
+          class="align-stretch borders"
+        >
+          <right-side @push-button="input" />
+        </v-col> -->
+      <v-col
+        cols="12"
+        class="ma-0 pa-0"
+      >
+        <v-container
+          fluid
+          class="ma-0 pa-0"
+        >
+          <v-row
+            dense
+            no-gutters
+          >
+            <v-col
+              class="mt-0 pt-0"
+              cols="8"
+            >
+              <center @push-button="input" />
+            </v-col>
+            <v-col
+              class="mt-0 pt-0"
+              cols="4"
+            >
+              <right-side @push-button="input" />
+            </v-col>
+          </v-row>
+        </v-container>
+      </v-col>
+    </v-row>
+    <v-row
+      v-else
+      align="stretch"
+    >
       <v-col
         cols="3"
         class="ma-0 pa-0"
@@ -36,7 +104,7 @@
       </v-col>
       <v-col
         cols="3"
-        class="ma-0 pa-0"
+        class="ma-0 pa-0 align-self-stretch"
       >
         <right-side @push-button="input" />
       </v-col>
@@ -193,3 +261,9 @@ export default {
   }
 }
 </script>
+
+<style>
+.borders {
+  border: 1px solid black;
+}
+</style>
