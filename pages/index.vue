@@ -13,21 +13,6 @@
       v-if="$vuetify.breakpoint.mobile"
       align="stretch"
     >
-      <!-- <v-col
-        cols="3"
-        class="ma-0 pa-0"
-      >
-        <left-side
-          @turn-off="turnOff"
-          @grand-total="grandTotal"
-          @delete="deletes"
-          @memory-recall="memoryRecall"
-          @clear-entry="clearEntry"
-          @memory-delete="memoryDelete"
-          @memory-add="memoryAdd"
-          @turn-on="turnOn"
-        />
-      </v-col> -->
       <v-col
         cols="12"
         class="ma-0 pa-0"
@@ -43,12 +28,6 @@
           @turn-on="turnOn"
         />
       </v-col>
-      <!-- <v-col
-          cols="4"
-          class="align-stretch borders"
-        >
-          <right-side @push-button="input" />
-        </v-col> -->
       <v-col
         cols="12"
         class="ma-0 pa-0"
@@ -261,9 +240,3 @@ export default {
   }
 }
 </script>
-
-<style>
-.borders {
-  border: 1px solid black;
-}
-</style>

@@ -1,10 +1,18 @@
 # regular-calculator
 
+> Made with Nuxt.js and Vuetify. <br /> <br />
+
+Inspired from calculator Karce Kc-B88 model
+
 Build using the following plugins and asset:
 
 - Nuxt.js
 - Vuetify
-- DigitalNormal font
+- DigitalNormal font from [here](https://www.fontspace.com/digital-font-f17797)
+
+# Demo
+
+[Demo link](https://archierinn-calc.netlify.app)
 
 ## Build Setup
 
@@ -24,3 +32,5 @@ $ npm run generate
 ```
 
 For detailed explanation on how things work, check out [Nuxt.js docs](https://nuxtjs.org).
+
+Copyright &copy; 2020 Developed by ArchieRinn.
