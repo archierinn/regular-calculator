@@ -14,7 +14,10 @@
       height="10vw"
     >
       <template v-slot:append>
-        <span class="status-text">{{ status }}</span>
+        <span
+          v-if="show"
+          class="status-text"
+        >{{ status }}</span>
       </template>
     </v-text-field>
     <v-text-field
